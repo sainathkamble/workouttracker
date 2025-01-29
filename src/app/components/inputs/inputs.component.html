@@ -1,0 +1,21 @@
+<div class="h-full w-full grid grid-cols-1 grid-rows-2 place-items-center">
+  <mat-form-field class="h-auto w-auto grid grid-cols-1 grid-rows-3">
+    <mat-label>Name</mat-label>
+    <input class="w-full" matInput [(ngModel)]="name">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Workout Type</mat-label>
+    <mat-select class="w-full" [(ngModel)]="workoutType">
+      <mat-option name="Cycling" value="Cycling">Cycling</mat-option>
+      <mat-option name="Running" value="Running">Running</mat-option>
+      <mat-option name="Swimming" value="Swimming">Swimming</mat-option>
+      <mat-option name="Yoga" value="Yoga">Yoga</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Duration In Minutes</mat-label>
+    <input class="w-full" matInput type="number" [(ngModel)]="duration">
+  </mat-form-field>
+
+  <button class="h-auto w-auto p-2 rounded-md text-white bg-cyan-600 hover:bg-sky-700" mat-raised-button color="primary" (click)="saveData()">Add Workout</button>
+</div>
